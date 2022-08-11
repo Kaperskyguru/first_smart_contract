@@ -3,8 +3,8 @@ const Web3 = require('web3');
 const { abi, evm } = require('./compile');
 
 const provider = new HDWalletProvider(
-  'decide lamp unit apart spray repair private door open pretty asset chapter', //Nnemonics
-  'https://rinkeby.infura.io/v3/df8327d420464c17a1684d86f994df0f' // Rinkeby Address from infura.io
+  process.env.MNEMONICS, //Nnemonics
+  process.env.RINKEBY_ADDRESS // Rinkeby Address from infura.io
 );
 
 const web3 = new Web3(provider);
